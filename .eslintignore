@@ -1,0 +1,5 @@
+dist/*.js
+src/assets
+src/lib/*.js
+*.js
+src/router/*.ts

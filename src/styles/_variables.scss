@@ -1,0 +1,76 @@
+/* 内部使用变量 */
+@import './element-variables';
+
+/* ========================== 基础颜色========================== */
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+$primaryColor: $--color-primary;
+$themeColor: $primaryColor;
+/* ========================== 侧边栏(菜单栏) ========================== */
+// 侧边栏宽度
+$sideBarWidth: 240px;
+
+// 侧边栏标题(系统名称)颜色
+$sideBarTitleColor: white;
+
+// Logo栏背景色
+$sideBarLogoBg: #2b2f3a;
+
+// 菜单背景色
+$menuBg: #282C34;
+
+// 菜单字体颜色
+$menuText:white;
+
+// 子菜单背景颜色
+$subMenuBg: #182C34;
+
+// 子菜单鼠标悬停颜色
+$subMenuHoverBg:#20232A;
+
+// 子菜单处于active状态时候父菜单颜色
+$subMenuActiveText:#3A71A8;
+
+// 生效取决于 settings.sidebarTextTheme 设置
+$menuActiveText:#409EFF;
+
+/* ========================== 导航条 ========================== */
+// 导航条高度
+$navBarHeight: 50px;
+
+// 导航条背景色
+$navBarBg: white;
+
+/* ========================== tab ========================== */
+
+// tab背景色
+$tagViewBg: white;
+
+// tab Active背景色
+$tagViewActiveBg: #ccc;
+
+// tab Active字体颜色
+$tagViewActiveTextColor: #fff;
+
+$filterContainerMaxHeight: 42px;
+
+$footerContainerMaxHeight: 50px;
+
+/* ========================== modal ========================== */
+
+$modalHeaderBg: #324157;
+$modalTitleColor: #fff;
+
+:export {
+  menuBg: $menuBg;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  theme: $themeColor;
+}

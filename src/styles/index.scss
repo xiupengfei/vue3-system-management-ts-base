@@ -1,0 +1,8 @@
+// @import './variables.scss'; // 默认加载
+// @import './mixins.scss'; // 默认加载
+@import './normalize';
+@import './transition.scss';
+@import './svgicon.scss';
+@import './element-variables';
+@import '~element3/lib/theme-chalk/index.css';
+@import './global';
