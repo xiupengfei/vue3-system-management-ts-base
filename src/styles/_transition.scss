@@ -47,15 +47,3 @@
 .breadcrumb-leave-active {
   position: absolute;
 }
-
-// bounceOut
-.bounceOut-enter-active,
-.bounceOut-leave-active {
-  transition: all .4s;
-}
-
-.bounceOut-enter,
-.bounceOut-leave-active {
-  transform: scale(.5);
-  opacity: 0;
-}

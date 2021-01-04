@@ -6,3 +6,15 @@
     clear: both;
   }
 }
+
+$spacing: 8px;
+$margins: (1, 2, 3, 4, 5);
+$paddings: (1, 2, 3, 4, 5);
+
+@mixin spacing($attr: 'margin-right', $c: 5) {
+  @for $var from 1 to $c {
+    &-#{$var} {
+      #{$attr}: $spacing * $var !important;
+    }
+  }
+}

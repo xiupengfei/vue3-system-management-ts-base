@@ -67,5 +67,14 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "prettier": {
+    "eslintIntegration": true,
+    "stylelintIntegration": true,
+    "singleQuote": true,
+    "semi": false,
+    "insertPragma": false,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
   }
 }

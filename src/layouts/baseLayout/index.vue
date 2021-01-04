@@ -1,23 +1,34 @@
 <template>
-  <sidebar class="sidebar-container fl" test="1" />
-  <router-view v-slot="{ Component }">
-    <!-- <keep-alive> -->
-    <transition name="fade-transform" mode="out-in">
-      <component :is="Component" class="page-container fl" />
-    </transition>
-    <!-- </keep-alive> -->
-  </router-view>
+  <section class="base-layout" ref="test">
+    <side-bar class="sidebar-container" />
+    <section class="page-container">
+      <header-bar />
+      <tabs />
+      <section class="main-container">
+        <router-view #default="{ Component }">
+          <!-- <keep-alive> -->
+          <transition name="fade-transform" mode="out-in">
+            <component :is="Component" class="page" />
+          </transition>
+          <!-- </keep-alive> -->
+        </router-view>
+      </section>
+    </section>
+  </section>
 </template>
 <script lang="ts">
-import { useMessage } from 'element3'
+// import { useMessage } from 'element3'
+// import { SetupContext } from 'vue'
 import { useRoute } from 'vue-router'
 
-import { Sidebar } from './components'
+import { SideBar, HeaderBar, Tabs } from './components'
 
 export default {
   name: 'BaseLayout',
   components: {
-    Sidebar
+    SideBar,
+    HeaderBar,
+    Tabs
   },
   setup() {
     const route = useRoute()
@@ -29,14 +40,25 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.sidebar-container,
-.page-container {
-  height: inherit;
-}
-.page-container {
-  width: calc(100% - #{$sideBarWidth});
-}
-.sidebar-container {
-  background-color: $menuBg;
+.base-layout {
+  height: 100%;
+  display: flex;
+  .sidebar-container {
+    background-color: $menuBg;
+    height: inherit;
+  }
+  .page-container {
+    height: inherit;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .main-container {
+      flex: 1;
+      padding: 16px;
+      & > .page {
+        height: 100%;
+      }
+    }
+  }
 }
 </style>

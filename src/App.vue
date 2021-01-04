@@ -15,9 +15,9 @@ export default {
     const route = useRoute()
     // console.log('router', router)
     // console.log('route', route.path)
-    setTimeout(() => {
-      message('sss')
-    }, 1000)
+    // setTimeout(() => {
+    //   message('sss')
+    // }, 1000)
   }
 }
 </script>

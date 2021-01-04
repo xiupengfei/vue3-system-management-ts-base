@@ -164,8 +164,15 @@ export default defineComponent({
         padding: 0 !important;
       }
     }
-
-    .el-submenu {
+    // bug fix单一子菜单
+    & > a {
+      .el-menu-item {
+        & > span {
+          visibility: hidden;
+        }
+      }
+    }
+    & > .el-submenu {
       overflow: hidden;
 
       & > .el-submenu__title {

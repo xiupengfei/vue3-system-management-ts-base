@@ -36,7 +36,6 @@ modulesFiles.keys().map(modulePath => {
                                  // 当一个路由下面的 children 声明的路由大于1个时，自动会变成嵌套的模式--如组件页面
                                  // 只有一个时，会将那个子路由当做根路由显示在侧边栏--如引导页面
                                  // 若不管路由下面的 children 声明的个数都显示根路由
-
   }
  */
 
@@ -48,40 +47,14 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/redirect/:path*',
-        component: () => import(/* webpackChunkName: "redirect" */ '@/components/redirect.vue')
+        component: () => import(/* webpackChunkName: "common_page" */ '@/views/common/redirect.vue')
       }
     ]
   },
   {
     path: '/404',
-    component: () => import(/* webpackChunkName: "404" */ '@/views/common/404.vue'),
+    component: () => import(/* webpackChunkName: "common_page" */ '@/views/common/404.vue'),
     meta: { hidden: true }
-  },
-  {
-    path: '/',
-    component: BaseLayout,
-    redirect: '/dashboard',
-    meta: {
-      title: '测试'
-    },
-    children: [
-      {
-        path: 'dashboard',
-        component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/index.vue'),
-        name: 'Dashboard',
-        meta: {
-          title: 'Dashboard'
-        }
-      },
-      {
-        path: 'about',
-        name: 'About',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
-        meta: {
-          title: 'About'
-        }
-      }
-    ]
   },
   ...modules,
   {

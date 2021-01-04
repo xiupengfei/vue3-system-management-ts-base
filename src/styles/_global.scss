@@ -65,3 +65,36 @@ ul {
   -ms-user-select: none;
   -webkit-user-select: none;
 }
+
+/**
+  margin
+*/
+.mr {
+  @include spacing('margin-right');
+}
+.ml {
+  @include spacing('margin-left');
+}
+.mt {
+  @include spacing('margin-top');
+}
+.mb {
+  @include spacing('margin-bottom');
+}
+
+
+/**
+  padding
+*/
+.pr {
+  @include spacing('padding-right');
+}
+.pl {
+  @include spacing('padding-left');
+}
+.pt {
+  @include spacing('padding-top');
+}
+.pb {
+  @include spacing('padding-bottom');
+}
